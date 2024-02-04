@@ -5,7 +5,7 @@ const Post = ({ post }) => {
 
     return (
         <div className="p-5">
-            <div className="border h-full p-2 space-y-2 bg-blue-400 rounded-xl drop-shadow-2xl">
+            <div className="border h-full p-2 space-y-2 bg-[#DC4D01] rounded-xl drop-shadow-2xl">
                 <h2 className="text-lg font-medium text-white">Id No : <span className='text-green-600'>{userId}</span></h2>
                 <h2 className="text-lg font-medium text-white">Title : <span className='text-[#747]'>{title}</span></h2>
                 <p className="text-white">Details : <span className="text-[#501fb0]">{body}</span></p>
