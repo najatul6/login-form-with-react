@@ -1,9 +1,10 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../Layout/Navbar/Full/Fullbase/TotalBase/FireBase/firebase.config";
 import Swal from "sweetalert2";
 
 const Form = () => {
+    const navigate = useNavigate();
     const handleLogIn = e => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -21,6 +22,7 @@ const Form = () => {
                     showConfirmButton: false,
                     timer: 1500
                   });
+navigate('/')
             }
         })
         .catch(error =>{
