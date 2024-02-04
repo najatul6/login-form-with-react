@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 import auth from "../Layout/Navbar/Full/Fullbase/TotalBase/FireBase/firebase.config";
+import Swal from "sweetalert2";
 
 const Form = () => {
     const handleLogIn = e => {
@@ -12,7 +13,15 @@ const Form = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then(result =>{
             const user = result.user;
-            console.log('user',user)
+            if(result?.user){
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Log in successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            }
         })
         .catch(error =>{
             console.error(error)
