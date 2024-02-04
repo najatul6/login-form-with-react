@@ -12,7 +12,7 @@ const Form = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then(result =>{
             const user = result.user;
-            console.log(user)
+            console.log('user',user)
         })
         .catch(error =>{
             console.error(error)
