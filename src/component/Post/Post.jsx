@@ -15,7 +15,7 @@ const Post = ({ post }) => {
 };
 
 Post.propTypes = {
-    post: PropTypes.array.isRequired
+    post: PropTypes.object.isRequired
 }
 
 export default Post;

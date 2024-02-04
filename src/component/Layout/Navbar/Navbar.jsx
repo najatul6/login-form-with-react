@@ -9,7 +9,7 @@ const Navbar = () => {
                         to="/"
                         className="mr-4 block cursor-pointer py-1.5 font-sans text-base font-medium leading-relaxed text-inherit antialiased"
                     >
-                        TEST
+                        Email Auth
                     </Link>
                     <ul className="ml-auto mr-8 hidden items-center gap-6 lg:flex">
                         <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
